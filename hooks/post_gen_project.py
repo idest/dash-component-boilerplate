@@ -90,7 +90,7 @@ _execute_command('npm install --ignore-scripts')
 # Run the first build
 print('Building initial bundles...')
 
-_execute_command('npm run build:js')
+_execute_command('NODE_OPTIONS=--openssl-legacy-provider npm run build:js')
 
 # Activating the venv and running the command
 # doesn't work on Linux with subprocess.
